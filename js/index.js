@@ -52,7 +52,7 @@ const link6nav = link5nav.nextElementSibling;
 const cta = document.querySelector('.cta');
 const ctaHeading = cta.querySelector('h1');
 const ctaButton = cta.querySelector('button');
-const ctaImg = document.querySelector('#cta-img');
+const ctaImg = document.getElementById('cta-img');
 
 const features = document.querySelector('.top-content div:nth-of-type(1)');
 const featuresHeading = features.querySelector('h4');
@@ -62,7 +62,7 @@ const about = document.querySelector('.top-content div:nth-of-type(2)');
 const aboutHeading = about.querySelector('h4');
 const aboutText = about.querySelector('p');
 
-const middleImg = document.querySelector('#middle-img');
+const middleImg = document.getElementById('middle-img');
 
 const services = document.querySelector('.bottom-content div:nth-of-type(1)');
 const servicesHeading = services.querySelector('h4');
@@ -82,6 +82,7 @@ const phone = address.nextElementSibling;
 const email = phone.nextElementSibling;
 
 const copyright = document.querySelector('footer p');
+console.log(copyright);
 
 link1nav.textContent = siteContent['nav']['nav-item-1'];
 link2nav.textContent = siteContent['nav']['nav-item-2'];
@@ -117,3 +118,16 @@ phone.textContent = siteContent['contact']['phone'];
 email.textContent = siteContent['contact']['email'];
 
 copyright.textContent = siteContent['footer']['copyright'];
+
+const navLinks = document.querySelectorAll('nav a');
+navLinks.forEach(element => element.style.color = 'green');
+ 
+const newLink1 = document.createElement('a');
+newLink1.textContent = 'New End Link';
+newLink1.href = '#';
+document.querySelector('nav').appendChild(newLink1);
+
+const newLink2 = document.createElement('a');
+newLink2.textContent = 'New Start Link';
+newLink2.href = '#';
+document.querySelector('nav').prepend(newLink2);
