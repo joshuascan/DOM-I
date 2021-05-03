@@ -52,7 +52,7 @@ const link6nav = link5nav.nextElementSibling;
 const cta = document.querySelector('.cta');
 const ctaHeading = cta.querySelector('h1');
 const ctaButton = cta.querySelector('button');
-const ctaImg = cta.querySelector('img');
+const ctaImg = document.querySelector('#cta-img');
 
 const features = document.querySelector('.top-content div:nth-of-type(1)');
 const featuresHeading = features.querySelector('h4');
@@ -62,9 +62,26 @@ const about = document.querySelector('.top-content div:nth-of-type(2)');
 const aboutHeading = about.querySelector('h4');
 const aboutText = about.querySelector('p');
 
-const middleImg = document.querySelector('.main-content img');
+const middleImg = document.querySelector('#middle-img');
 
-// const
+const services = document.querySelector('.bottom-content div:nth-of-type(1)');
+const servicesHeading = services.querySelector('h4');
+const servicesText = services.querySelector('p');
+
+const product = document.querySelector('.bottom-content div:nth-of-type(2)');
+const productHeading = product.querySelector('h4');
+const productText = productHeading.nextElementSibling;
+
+const vision = product.nextElementSibling;
+const visionHeading = vision.querySelector('h4');
+const visionText = visionHeading.nextElementSibling;
+
+const contactHeading = document.querySelector('.contact h4');
+const address = contactHeading.nextElementSibling
+const phone = address.nextElementSibling;
+const email = phone.nextElementSibling;
+
+const copyright = document.querySelector('footer p');
 
 link1nav.textContent = siteContent['nav']['nav-item-1'];
 link2nav.textContent = siteContent['nav']['nav-item-2'];
@@ -85,5 +102,18 @@ aboutText.textContent = siteContent['main-content']['about-content'];
 
 middleImg.src = siteContent['main-content']['middle-img-src'];
 
+servicesHeading.textContent = siteContent['main-content']['services-h4'];
+servicesText.textContent = siteContent['main-content']['services-content'];
 
+productHeading.textContent = siteContent['main-content']['product-h4'];
+productText.textContent = siteContent['main-content']['product-content'];
 
+visionHeading.textContent = siteContent['main-content']['vision-h4'];
+visionText.textContent = siteContent['main-content']['vision-content'];
+
+contactHeading.textContent = siteContent['contact']['contact-h4'];
+address.textContent = siteContent['contact']['address'];
+phone.textContent = siteContent['contact']['phone'];
+email.textContent = siteContent['contact']['email'];
+
+copyright.textContent = siteContent['footer']['copyright'];
