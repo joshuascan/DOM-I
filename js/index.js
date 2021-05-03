@@ -41,3 +41,17 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+const header = document.querySelector('header');
+const link1nav = header.querySelector('a');
+const link2nav = link1nav.nextElementSibling;
+const link3nav = link2nav.nextElementSibling;
+const link4nav = link3nav.nextElementSibling;
+const link5nav = link4nav.nextElementSibling;
+const link6nav = link5nav.nextElementSibling;
+
+link1nav.textContent = 'Services';
+link2nav.textContent = 'Product';
+link3nav.textContent = 'Vision';
+link4nav.textContent = 'Features';
+link5nav.textContent = 'About';
+link6nav.textContent = 'Contact';
